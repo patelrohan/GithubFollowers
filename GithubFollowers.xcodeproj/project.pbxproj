@@ -12,6 +12,10 @@
 		1C7B71902A8A91B70038DB15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7B718F2A8A91B70038DB15 /* ViewController.swift */; };
 		1C7B71952A8A91B80038DB15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B71942A8A91B80038DB15 /* Assets.xcassets */; };
 		1C7B71982A8A91B80038DB15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C7B71962A8A91B80038DB15 /* LaunchScreen.storyboard */; };
+		1C7B71A02A8AC6270038DB15 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7B719F2A8AC6270038DB15 /* SearchVC.swift */; };
+		1C7B71A22A8AC6880038DB15 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7B71A12A8AC6880038DB15 /* FavoritesListVC.swift */; };
+		1CA4FC782A8C8A8E005267DF /* GHFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA4FC772A8C8A8E005267DF /* GHFButton.swift */; };
+		1CA4FC7A2A8C8DD0005267DF /* GHFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA4FC792A8C8DD0005267DF /* GHFTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		1C7B71942A8A91B80038DB15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C7B71972A8A91B80038DB15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C7B71992A8A91B80038DB15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C7B719F2A8AC6270038DB15 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		1C7B71A12A8AC6880038DB15 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
+		1CA4FC772A8C8A8E005267DF /* GHFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFButton.swift; sourceTree = "<group>"; };
+		1CA4FC792A8C8DD0005267DF /* GHFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				1C7B71942A8A91B80038DB15 /* Assets.xcassets */,
 				1C7B71962A8A91B80038DB15 /* LaunchScreen.storyboard */,
 				1C7B71992A8A91B80038DB15 /* Info.plist */,
+				1C7B719F2A8AC6270038DB15 /* SearchVC.swift */,
+				1C7B71A12A8AC6880038DB15 /* FavoritesListVC.swift */,
+				1CA4FC772A8C8A8E005267DF /* GHFButton.swift */,
+				1CA4FC792A8C8DD0005267DF /* GHFTextField.swift */,
 			);
 			path = GithubFollowers;
 			sourceTree = "<group>";
@@ -134,8 +146,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7B71A02A8AC6270038DB15 /* SearchVC.swift in Sources */,
 				1C7B71902A8A91B70038DB15 /* ViewController.swift in Sources */,
+				1C7B71A22A8AC6880038DB15 /* FavoritesListVC.swift in Sources */,
+				1CA4FC782A8C8A8E005267DF /* GHFButton.swift in Sources */,
 				1C7B718C2A8A91B70038DB15 /* AppDelegate.swift in Sources */,
+				1CA4FC7A2A8C8DD0005267DF /* GHFTextField.swift in Sources */,
 				1C7B718E2A8A91B70038DB15 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
