@@ -13,6 +13,26 @@ class SearchVC: UIViewController {
     let usernameTextField = GHFTextField()
     let getFollowersBtn = GHFButton(backgroundColor: .systemGreen, title: "Get Followers")
     
+    var isUsernameEntered: Bool{
+        return !(usernameTextField.text!.isEmpty)
+    }
+    
+    func dismissKeyboard(){
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
+    }
+    
+    
+    @objc func pushFollowersListVC(){
+        
+        guard isUsernameEntered else  {return}
+        
+        let followersListVC         = FollowersListVC()
+        followersListVC.userName    = usernameTextField.text ?? "apple"
+        followersListVC.title       = usernameTextField.text ?? "apple"
+        navigationController?.pushViewController(followersListVC, animated: true)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +71,7 @@ class SearchVC: UIViewController {
     
     func configureUsernameTextField(){
         view.addSubview(usernameTextField)
+        usernameTextField.delegate = self
         
         NSLayoutConstraint.activate([
             usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
@@ -63,6 +84,7 @@ class SearchVC: UIViewController {
     
     func configureGetFollowersBtn(){
         view.addSubview(getFollowersBtn)
+        getFollowersBtn.addTarget(self, action: #selector(pushFollowersListVC), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             getFollowersBtn.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -48),
@@ -72,11 +94,6 @@ class SearchVC: UIViewController {
         ])
     }
     
-
-    func dismissKeyboard(){
-        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
-        view.addGestureRecognizer(tap)
-    }
     
     /*
     // MARK: - Navigation
@@ -89,3 +106,13 @@ class SearchVC: UIViewController {
     */
 
 }
+
+extension SearchVC : UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        pushFollowersListVC()
+        return true
+    }
+    
+}
+

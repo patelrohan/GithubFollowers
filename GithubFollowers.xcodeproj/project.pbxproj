@@ -16,6 +16,7 @@
 		1C7B71A22A8AC6880038DB15 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7B71A12A8AC6880038DB15 /* FavoritesListVC.swift */; };
 		1CA4FC782A8C8A8E005267DF /* GHFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA4FC772A8C8A8E005267DF /* GHFButton.swift */; };
 		1CA4FC7A2A8C8DD0005267DF /* GHFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA4FC792A8C8DD0005267DF /* GHFTextField.swift */; };
+		1CA4FC7C2A8DD5AC005267DF /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA4FC7B2A8DD5AC005267DF /* FollowersListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1C7B71A12A8AC6880038DB15 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 		1CA4FC772A8C8A8E005267DF /* GHFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFButton.swift; sourceTree = "<group>"; };
 		1CA4FC792A8C8DD0005267DF /* GHFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFTextField.swift; sourceTree = "<group>"; };
+		1CA4FC7B2A8DD5AC005267DF /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				1C7B71962A8A91B80038DB15 /* LaunchScreen.storyboard */,
 				1C7B71992A8A91B80038DB15 /* Info.plist */,
 				1C7B719F2A8AC6270038DB15 /* SearchVC.swift */,
+				1CA4FC7B2A8DD5AC005267DF /* FollowersListVC.swift */,
 				1C7B71A12A8AC6880038DB15 /* FavoritesListVC.swift */,
 				1CA4FC772A8C8A8E005267DF /* GHFButton.swift */,
 				1CA4FC792A8C8DD0005267DF /* GHFTextField.swift */,
@@ -148,6 +151,7 @@
 			files = (
 				1C7B71A02A8AC6270038DB15 /* SearchVC.swift in Sources */,
 				1C7B71902A8A91B70038DB15 /* ViewController.swift in Sources */,
+				1CA4FC7C2A8DD5AC005267DF /* FollowersListVC.swift in Sources */,
 				1C7B71A22A8AC6880038DB15 /* FavoritesListVC.swift in Sources */,
 				1CA4FC782A8C8A8E005267DF /* GHFButton.swift in Sources */,
 				1C7B718C2A8A91B70038DB15 /* AppDelegate.swift in Sources */,
