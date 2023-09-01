@@ -20,7 +20,7 @@ class FollowersListVC: UIViewController {
         
         NetworkManager.sharedNetworkManager.getFollowers(for: userName, page: 1) { (followers, errorMessage) in
             guard let followers = followers else {
-                self.presentGHFAlertOnMainThread(title: "Something went wrong", message: errorMessage!, buttonTitle: "Ok")
+                self.presentGHFAlertOnMainThread(title: "Something went wrong", message: errorMessage!.rawValue, buttonTitle: "Ok")
                 return
             }
             
@@ -34,15 +34,4 @@ class FollowersListVC: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
