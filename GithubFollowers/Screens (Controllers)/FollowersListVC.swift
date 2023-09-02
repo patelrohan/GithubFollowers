@@ -14,19 +14,30 @@ class FollowersListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
-        
-        NetworkManager.sharedNetworkManager.getFollowers(for: userName, page: 1) { (followers, errorMessage) in
-            guard let followers = followers else {
-                self.presentGHFAlertOnMainThread(title: "Something went wrong", message: errorMessage!.rawValue, buttonTitle: "Ok")
-                return
+
+        NetworkManager.sharedNetworkManager.getFollowers(for: userName, page: 1) { result in
+            switch result{
+                
+            case .success(let followers):
+                print(followers)
+                
+            case .failure(let error):
+                self.presentGHFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
             }
-            
-            print("Count: \(followers.count)")
-            print(followers)
         }
+        
+//        NetworkManager.sharedNetworkManager.getFollowers(for: userName, page: 1) { (followers, errorMessage) in
+//            guard let followers = followers else {
+//                self.presentGHFAlertOnMainThread(title: "Something went wrong", message: errorMessage!.rawValue, buttonTitle: "Ok")
+//                return
+//            }
+            
+//            print("Count: \(followers.count)")
+//            print(followers)
+//        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
