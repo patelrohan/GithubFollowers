@@ -10,13 +10,30 @@ import UIKit
 class FollowersListVC: UIViewController {
     
     var userName: String = ""
+    var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureCollectionView()
+        configureCollectionView()
+        getFollowers()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    
+    func configureViewController(){
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
-
+    }
+    
+    
+    func getFollowers(){
         NetworkManager.sharedNetworkManager.getFollowers(for: userName, page: 1) { result in
             switch result{
                 
@@ -28,21 +45,24 @@ class FollowersListVC: UIViewController {
             }
         }
         
-//        NetworkManager.sharedNetworkManager.getFollowers(for: userName, page: 1) { (followers, errorMessage) in
-//            guard let followers = followers else {
-//                self.presentGHFAlertOnMainThread(title: "Something went wrong", message: errorMessage!.rawValue, buttonTitle: "Ok")
-//                return
-//            }
-            
-//            print("Count: \(followers.count)")
-//            print(followers)
-//        }
+        //Networkmanager before refactoring (without using Result)
         
+       /* NetworkManager.sharedNetworkManager.getFollowers(for: userName, page: 1) { (followers, errorMessage) in
+            guard let followers = followers else {
+                self.presentGHFAlertOnMainThread(title: "Something went wrong", message: errorMessage!.rawValue, buttonTitle: "Ok")
+                return
+            }
+            
+            print("Count: \(followers.count)")
+            print(followers)
+        }*/
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
     
+    func configureCollectionView(){
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
+        view.addSubview(collectionView)
+        collectionView.backgroundColor = .systemPink
+        collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
+    }
 }
