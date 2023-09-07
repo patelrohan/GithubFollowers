@@ -23,7 +23,7 @@ class GFHAvatarImageView: UIImageView {
     
     
     private func configure(){
-        layer.cornerRadius  = self.bounds.width/2
+        layer.cornerRadius  = 10
         clipsToBounds       = true
         image               = placeholderImg!
        
