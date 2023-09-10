@@ -10,7 +10,7 @@ import UIKit
 class NetworkManager{
     
     static let sharedNetworkManager     = NetworkManager()
-    private let baseURL                         = "https://api.github.com/users/"
+    private let baseURL                 = "https://api.github.com/users/"
     let cache                           = NSCache<NSString, UIImage>()
     
     private init(){}
@@ -18,7 +18,7 @@ class NetworkManager{
     
     func getFollowers(for username: String, page: Int, completed: @escaping(Result<[Follower], GHFError>) -> Void){
         
-        let endPoint = baseURL + "\(username)/followers?per_page=60&page=\(page)"
+        let endPoint = baseURL + "\(username)/followers?per_page=100&page=\(page)"
         
         guard let url = URL(string: endPoint) else {
             completed(.failure(.invalidUsername))
