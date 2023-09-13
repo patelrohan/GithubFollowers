@@ -7,14 +7,15 @@
 
 import UIKit
 
-class FollowersListVC: UIViewController {
+class FollowersListVC: UIViewController, UISearchControllerDelegate {
     
     enum Section { case main }
     
-    var userName: String = ""
-    var followers: [Follower] = []
-    var page = 1
-    var hasMoreFollowers = true
+    var userName: String                = ""
+    var followers: [Follower]           = []
+    var filteredFollowers: [Follower]   = []
+    var page                            = 1
+    var hasMoreFollowers                = true
     
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource <Section, Follower>!
@@ -26,6 +27,7 @@ class FollowersListVC: UIViewController {
         configureCollectionView()
         configureDataSource()
         getFollowers(username: userName, page: page)
+        configureSearchController()
     }
     
     
@@ -73,6 +75,17 @@ class FollowersListVC: UIViewController {
         })
     }
     
+    
+    func configureSearchController(){
+        let searchController                         = UISearchController()
+        searchController.searchResultsUpdater        = self
+        searchController.searchBar.delegate          = self
+        searchController.searchBar.placeholder       = "Search for a username"
+        navigationItem.searchController              = searchController
+        navigationItem.hidesSearchBarWhenScrolling   = false
+    }
+    
+    
     func getFollowers(username: String, page: Int){
         showLoadingView()
         NetworkManager.sharedNetworkManager.getFollowers(for: userName, page: self.page) { [weak self] result in
@@ -92,7 +105,7 @@ class FollowersListVC: UIViewController {
                         return
                     }
                 }
-                self.updateData()
+                self.updateData(with: self.followers)
                 
             case .failure(let error):
                 self.presentGHFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
@@ -114,7 +127,7 @@ class FollowersListVC: UIViewController {
     
     
     
-    func updateData(){
+    func updateData(with followers: [Follower]){
         var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
         snapshot.appendSections([.main])
         snapshot.appendItems(followers)
@@ -136,5 +149,21 @@ extension FollowersListVC: UICollectionViewDelegate{
             page += 1
             getFollowers(username: userName, page: page)
         }
+    }
+}
+
+
+extension FollowersListVC: UISearchResultsUpdating, UISearchBarDelegate{
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
+        
+        filteredFollowers = followers.filter { $0.login.lowercased().contains(filter.lowercased()) }
+        updateData(with: filteredFollowers)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        print("cancel tapped")
+        updateData(with: self.followers)
     }
 }
