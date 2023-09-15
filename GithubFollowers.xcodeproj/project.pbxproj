@@ -25,9 +25,10 @@
 		1CA4FC8A2AA1AABD005267DF /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA4FC892AA1AABD005267DF /* Follower.swift */; };
 		1CA4FC8C2AA1ABB4005267DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA4FC8B2AA1ABB4005267DF /* User.swift */; };
 		1CA4FC8F2AA27546005267DF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA4FC8E2AA27546005267DF /* NetworkManager.swift */; };
-		1CA4FC922AA29B44005267DF /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA4FC912AA29B44005267DF /* ErrorMessage.swift */; };
 		1CA4FC952AA307E1005267DF /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA4FC942AA307E1005267DF /* FollowerCell.swift */; };
 		1CA4FC972AA3087E005267DF /* GFHAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA4FC962AA3087E005267DF /* GFHAvatarImageView.swift */; };
+		1CD61E6C2AB26CC2000012DF /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD61E6B2AB26CC2000012DF /* UserInfoVC.swift */; };
+		1CD61E6E2AB4C7D3000012DF /* GHFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD61E6D2AB4C7D3000012DF /* GHFError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,9 +52,10 @@
 		1CA4FC892AA1AABD005267DF /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		1CA4FC8B2AA1ABB4005267DF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1CA4FC8E2AA27546005267DF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		1CA4FC912AA29B44005267DF /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		1CA4FC942AA307E1005267DF /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		1CA4FC962AA3087E005267DF /* GFHAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFHAvatarImageView.swift; sourceTree = "<group>"; };
+		1CD61E6B2AB26CC2000012DF /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
+		1CD61E6D2AB4C7D3000012DF /* GHFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				1C7B719F2A8AC6270038DB15 /* SearchVC.swift */,
 				1CA4FC7B2A8DD5AC005267DF /* FollowersListVC.swift */,
 				1C7B71A12A8AC6880038DB15 /* FavoritesListVC.swift */,
+				1CD61E6B2AB26CC2000012DF /* UserInfoVC.swift */,
 			);
 			path = "Screens (Controllers)";
 			sourceTree = "<group>";
@@ -195,7 +198,7 @@
 		1CA4FC902AA29B36005267DF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				1CA4FC912AA29B44005267DF /* ErrorMessage.swift */,
+				1CD61E6D2AB4C7D3000012DF /* GHFError.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				1CA4FC822A9F8F68005267DF /* GHFAlertVC.swift in Sources */,
 				1CA4FC842AA169B3005267DF /* UIViewController+Ext.swift in Sources */,
 				1CA4FC7E2A8EAB66005267DF /* GHFTitleLabel.swift in Sources */,
+				1CD61E6E2AB4C7D3000012DF /* GHFError.swift in Sources */,
 				1CA4FC802A9F8B74005267DF /* GHFBodyLabel.swift in Sources */,
 				1C7B71902A8A91B70038DB15 /* ViewController.swift in Sources */,
 				1CA4FC8C2AA1ABB4005267DF /* User.swift in Sources */,
@@ -293,10 +297,10 @@
 				1C7B71A22A8AC6880038DB15 /* FavoritesListVC.swift in Sources */,
 				1CA4FC782A8C8A8E005267DF /* GHFButton.swift in Sources */,
 				1C7B718C2A8A91B70038DB15 /* AppDelegate.swift in Sources */,
-				1CA4FC922AA29B44005267DF /* ErrorMessage.swift in Sources */,
 				1CA4FC8F2AA27546005267DF /* NetworkManager.swift in Sources */,
 				1CA4FC7A2A8C8DD0005267DF /* GHFTextField.swift in Sources */,
 				1C7B718E2A8A91B70038DB15 /* SceneDelegate.swift in Sources */,
+				1CD61E6C2AB26CC2000012DF /* UserInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

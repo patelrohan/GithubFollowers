@@ -1,8 +1,8 @@
 //
-//  ErrorMessage.swift
+//  GHFError.swift
 //  GithubFollowers
 //
-//  Created by Rohan on 9/1/23.
+//  Created by Rohan on 9/15/23.
 //
 
 import Foundation
