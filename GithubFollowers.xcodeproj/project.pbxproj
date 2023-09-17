@@ -136,12 +136,12 @@
 		1C7B718A2A8A91B70038DB15 /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				1CA4FC882AA1AAAA005267DF /* Model */,
+				1CA4FC862AA1A59E005267DF /* Custom Views */,
+				1CA4FC852AA1A550005267DF /* Screens (Controllers) */,
 				1CA4FC902AA29B36005267DF /* Utilities */,
 				1CA4FC8D2AA2752E005267DF /* Managers */,
-				1CA4FC882AA1AAAA005267DF /* Model */,
 				1CA4FC872AA1A5CA005267DF /* Extensions */,
-				1CA4FC852AA1A550005267DF /* Screens (Controllers) */,
-				1CA4FC862AA1A59E005267DF /* Custom Views */,
 				1C7B718B2A8A91B70038DB15 /* AppDelegate.swift */,
 				1C7B718D2A8A91B70038DB15 /* SceneDelegate.swift */,
 				1C7B718F2A8A91B70038DB15 /* ViewController.swift */,
