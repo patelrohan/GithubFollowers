@@ -32,6 +32,7 @@
 		1CD61E702AB5332C000012DF /* GHFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD61E6F2AB5332C000012DF /* GHFUserInfoHeaderVC.swift */; };
 		1CD61E722AB533C3000012DF /* GHFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD61E712AB533C3000012DF /* GHFSecondaryTitleLabel.swift */; };
 		1CD61E752AB6B047000012DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD61E742AB6B047000012DF /* Constants.swift */; };
+		1CD61E772AB7FEE7000012DF /* GHFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD61E762AB7FEE7000012DF /* GHFItemInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		1CD61E6F2AB5332C000012DF /* GHFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		1CD61E712AB533C3000012DF /* GHFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		1CD61E742AB6B047000012DF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1CD61E762AB7FEE7000012DF /* GHFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFItemInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				1C3946882AAD7F460059496B /* GHFEmptyStateView.swift */,
+				1CD61E762AB7FEE7000012DF /* GHFItemInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				1C7B718C2A8A91B70038DB15 /* AppDelegate.swift in Sources */,
 				1CA4FC8F2AA27546005267DF /* NetworkManager.swift in Sources */,
 				1CA4FC7A2A8C8DD0005267DF /* GHFTextField.swift in Sources */,
+				1CD61E772AB7FEE7000012DF /* GHFItemInfoView.swift in Sources */,
 				1CD61E722AB533C3000012DF /* GHFSecondaryTitleLabel.swift in Sources */,
 				1CD61E702AB5332C000012DF /* GHFUserInfoHeaderVC.swift in Sources */,
 				1C7B718E2A8A91B70038DB15 /* SceneDelegate.swift in Sources */,
