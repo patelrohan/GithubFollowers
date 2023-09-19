@@ -53,17 +53,26 @@ class GHFItemInfoView: UIView {
         ])
     }
     
-    func set(itemInfoType: ItemInfoType){
+    func set(itemInfoType: ItemInfoType, withCount count: Int){
         switch itemInfoType {
-         case .repos:
-            break
+        
+        case .repos:
+            iconImageView.image = UIImage(named: SFSymbols.repos)
+            titleLabel.text = "Public Repos"
+            
         case .gists:
-            break
+            iconImageView.image = UIImage(named: SFSymbols.gist)
+            titleLabel.text = "Public Gists"
+        
         case .following:
-            break
+            iconImageView.image = UIImage(named: SFSymbols.followers)
+            titleLabel.text = "Followers"
+        
         case .followers:
-            break
+            iconImageView.image = UIImage(named: SFSymbols.following)
+            titleLabel.text = "Following"
         }
+        countLabel.text = String(count)
     }
         
 }
